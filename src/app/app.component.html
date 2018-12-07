@@ -1,0 +1,62 @@
+
+<div>Quantidade de jogos: {{id}}</div>
+<div class='container'>
+    <div>
+    <div class="numeros" >
+        <div class="btn-group" *ngFor="let i of Arr(num).fill(1); let rowIndex=index">
+            <button (click)=numberClick(rowIndex+1)>{{rowIndex+1}}</button>
+        </div>
+    </div>  
+    <div class="numerosSelecionados">
+        <li *ngFor="let number of selectedNumbers">
+            <span class="selected">{{number}}</span>
+        </li>
+    </div> 
+    
+    <div *ngIf="msgErro != ''" class="mensagem">
+            {{msgErro}}
+        </div>
+
+    </div>
+    <div class="botoes">
+        <button (click)='jogar()'>Jogar</button>
+        <button (click)='gerarSurpresinha()'>Jogar Surpresinha</button>    
+        <button (click)='salvarJogo()'>Resultado</button>
+        <button (click)='limpar()'>Limpar</button>
+    </div>
+</div>
+
+<div *ngIf="resultado != null" class="resultado">
+    <div>
+        Números sorteados:
+        <ul class="heroes">
+            <li *ngFor="let num of resultado.numerosSorteados">
+                <span class="selected">{{num}}</span>
+            </li>
+        </ul>  
+    </div> 
+    <div>
+        Números vencedores (Quadra)
+        <ul class="heroes">
+            <li *ngFor="let id of resultado.quadra">
+                <span class="selected">{{id}}</span>
+            </li>
+        </ul>  
+    </div> 
+    <div>
+    Números vencedores (Quina)   
+        <ul class="heroes">
+            <li *ngFor="let id of resultado.quina">
+                <span class="selected">{{id}}</span>
+            </li>
+        </ul> 
+    </div>  
+    <div>
+        Números vencedores (Sena)    
+        <ul class="heroes">
+            <li *ngFor="let id of resultado.sena">
+                <span class="selected">{{id}}</span>
+            </li>
+        </ul>  
+    </div>
+</div>

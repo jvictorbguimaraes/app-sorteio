@@ -1,0 +1,54 @@
+.container{
+    float: left;
+    width: 60%;
+}
+
+.btn-group button, .selected{
+    background-color: #4CAF50; 
+    border: 1px solid green;
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left;
+    width: 65px;    
+  }
+
+  li{
+    text-decoration: none;
+    list-style: none;   
+  }
+
+.inputs {
+    width: 30px;
+}
+
+.numeros {
+    display: inline-block;
+    width: 600px;
+}
+.botoes{
+    float: left;
+}
+
+.selected{
+    width: 30px;
+}
+
+.numerosSelecionados{
+    min-height: 50px;
+}
+
+.resultado{
+    float: right;
+    width: 40%;
+}
+
+.resultado div{
+    min-height: 150px;
+}
+
+.mensagem{
+    color: red; 
+}
+
+;
